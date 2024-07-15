@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main(){
+    double A, B, C;
+    scanf("%lf %lf %lf", &A, &B, &C);
+    double Rect_trian = 0.5*A*C;
+    double radius_c = 3.14159*C*C;
+    double trapi = ((A+B)/2)*C;
+    double sq_area = B*B;
+    double Rect = A*B;
+    printf("TRIANGULO: %.3lf\n",Rect_trian);
+    printf("CIRCULO: %.3lf\n",radius_c);
+    printf("TRAPEZIO: %.3lf\n",trapi);
+    printf("QUADRADO: %.3lf\n",sq_area);
+    printf("RETANGULO: %.3lf\n",Rect);
+
+  return 0;
+}
