@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main() {
+    int a, b, c;
+    scanf("%d %d %d", &a, &b, &c);
+    int aa=a;
+    int bb=b;
+    int cc=c;
+
+    if(a>b){
+        int tmp=a;
+        a=b;
+        b=tmp;
+    }
+    if(a>c){
+        int temp=a;a=c;c=temp;
+    }
+    if(b>c){
+        int temp =b;b=c;c=temp;
+    }
+
+    printf("%d\n", a);
+    printf("%d\n", b);
+    printf("%d\n", c);
+    printf("\n");
+
+     printf("%d\n", aa);
+    printf("%d\n", bb);
+    printf("%d\n", cc);
+    return 0;
+}
