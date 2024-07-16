@@ -1,0 +1,14 @@
+#include <stdio.h>
+    int main(){
+        int prod_1,prod_2,quantity_1,quantity_2;
+        float price_prod1,price_prod2;
+
+        scanf("%d %d %f", &prod_1, &quantity_1, &price_prod1);
+        scanf("%d %d %f", &prod_2, &quantity_2, &price_prod2);
+
+        float total_cost = (quantity_1*price_prod1)+(quantity_2*price_prod2);
+
+        printf("VALOR A PAGAR: R$ %.2f\n",total_cost);
+
+    return 0;
+}
