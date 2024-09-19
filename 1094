@@ -1,0 +1,31 @@
+#include<stdio.h>
+int main(){
+    int N;
+    scanf("%d",&N);
+    int c=0,r=0,s=0;
+    for(int i=1;i<=N;i++){
+        int x=0;
+        char ch;
+        scanf("%d %c",&x, &ch);
+        switch(ch){
+            case 'C':
+                c+=x;
+                break;
+            case 'R':
+                r+=x;
+                break;
+            case 'S':
+                s+=x;
+                break;
+        }
+    }
+    float total = c+r+s;
+    printf("Total: %.f cobaias\n",total);
+    printf("Total de coelhos: %d\n",c);
+    printf("Total de ratos: %d\n",r);
+    printf("Total de sapos: %d\n",s);
+    printf("Percentual de coelhos: %.2f %%\n",c/total*100);
+    printf("Percentual de ratos: %.2f %%\n",r/total*100);
+    printf("Percentual de sapos: %.2f %%\n",s/total*100);
+    return 0;
+}
