@@ -1,0 +1,25 @@
+#include <stdio.h>  
+int main() {    
+    int n, i = 1, a, b; 
+    scanf("%d", &n);    
+    while (i <= n) {    
+        scanf("%d %d", &a, &b); 
+        if (a > b) {    
+            int swp = a;    
+            a = b;  
+            b = swp;    
+        }   
+        if (a % 2 == 1) {   
+            a++;    
+        }   
+        int sum = 0;    
+        for (int j = a; j < b; j++) {   
+            if (j % 2 == 1) {   
+                sum += j;   
+            }   
+        }   
+        printf("%d\n", sum);    
+        i++;    
+    }   
+    return 0;   
+}
