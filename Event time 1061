@@ -1,0 +1,41 @@
+#include <stdio.h>
+int main() {
+    int d1,h1,m1,s1;
+    int d2,h2,m2,s2;
+    //first day input
+    scanf("%*s %d",&d1);
+    scanf("%d %*s %d %*s %d",&h1, &m1, &s1);
+    //last day input
+    scanf("%*s %d",&d2);
+    scanf("%d %*s %d %*s %d",&h2, &m2, &s2);
+
+    //calculation purpose convert to second
+        
+        //start day
+        int start;
+        start = h1*3600 + m1*60 + s1 + d1*86400;
+        
+        //last day
+        int last;
+        last = h2*3600 + m2*60 + s2 + d2*86400;
+    
+        int av = last - start;
+        int s,m,h,d;
+        d = av / 86400;
+        av %= 86400;
+
+        h = av / 3600;
+        av %= 3600;
+
+        m = av / 60;
+        av %= 60;
+
+        s = av;
+
+    //print
+    printf("%d dia(s)\n",d);
+    printf("%d hora(s)\n",h);
+    printf("%d minuto(s)\n",m);
+    printf("%d segundo(s)\n",s);
+    return 0;
+}
