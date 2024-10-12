@@ -1,0 +1,17 @@
+#include <stdio.h>  
+int main() {    
+    int x=0;
+    double a,b,avg,y,sum=0;
+    while(x < 2){
+        scanf("%lf",&y);
+      if(y>=0 && y<=10){
+         sum += y;
+         x++;
+      }
+      else
+        printf("nota invalida\n");
+    }
+    avg = sum/2.0;
+    printf("media = %.2lf\n",avg);
+    return 0;   
+}
