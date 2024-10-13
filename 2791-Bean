@@ -1,0 +1,11 @@
+#include<stdio.h>
+int main(){
+    int c[4],i=0;
+    while(i<=4){
+        scanf("%d",&c[i]);
+        if(c[i] == 1)
+            printf("%d\n",i+1);
+        i++;
+    }
+  return 0;
+}
