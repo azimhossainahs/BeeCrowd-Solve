@@ -1,0 +1,10 @@
+#include<stdio.h>
+int main(){
+  int x=0,j[5];
+  for(int i=0;i<5;i++){
+    scanf("%d",&j[i]);
+  }
+  x = j[0]*300 + j[1]*1500 + j[2]*600 + j[3]*1000 + j[4]*150 +225; 
+  printf("%d\n",x);
+  return 0;
+}
