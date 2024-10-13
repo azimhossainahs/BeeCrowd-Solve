@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main(){
+    unsigned long x,i,result;
+    while(1){
+        scanf("%lu%lu",&x, &i);
+        if(x == 0 && i==0)
+            break;
+        result = i * x;
+        printf("%lu\n",result);
+        }
+    return 0;
+}
