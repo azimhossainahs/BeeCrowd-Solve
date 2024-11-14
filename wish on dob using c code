@@ -1,0 +1,62 @@
+#include <stdio.h>
+#include <time.h>
+
+// Global structure for student information
+struct student {
+    char name[20];  // Student's name
+    char id[10];    // Student's ID
+    unsigned long long int reg;  // Registration number
+    struct date_of_birth {  // Structure for date of birth
+        int day;  // Day of birth
+        int month;  // Month of birth
+        int year;  // Year of birth
+    } dob;  
+};
+
+int main() {
+    int n;
+
+    // Ask user for the number of students
+    printf("Enter the number of students: ");
+    scanf("%d", &n);
+
+    // Create an array of 'n' students
+    struct student students[n];
+
+    // Get today's date using time.h
+    time_t t = time(NULL);
+    struct tm tm = *localtime(&t);
+    
+    int today_day = tm.tm_mday;
+    int today_month = tm.tm_mon + 1;  // tm_mon is zero-indexed (0 = January)
+    int today_year = tm.tm_year + 1900;  // tm_year gives years since 1900
+
+    // Input information for each student
+    for (int i = 0; i < n; i++) {
+        printf("\nEnter information for student %d\n", i + 1);
+
+        // Input student's name
+        printf("Enter student's name: ");
+        getchar();  // To clear the newline character from previous input
+        fgets(students[i].name, sizeof(students[i].name), stdin);
+
+        // Input student's ID
+        printf("Enter student's ID: ");
+        fgets(students[i].id, sizeof(students[i].id), stdin);
+
+        // Input student's registration number
+        printf("Enter student's registration number: ");
+        scanf("%llu", &students[i].reg);
+
+        // Input student's date of birth
+        printf("Enter student's date of birth (dd mm yyyy): ");
+        scanf("%d %d %d", &students[i].dob.day, &students[i].dob.month, &students[i].dob.year);
+
+        // Check if student's DOB matches today's date
+        if (students[i].dob.day == today_day && students[i].dob.month == today_month) {
+            printf("\nHappy Birthday!, %s! \n", students[i].name);
+        }
+    }
+
+    return 0;
+}
